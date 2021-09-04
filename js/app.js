@@ -17,6 +17,12 @@ document.getElementById('key-pad').addEventListener('click', function (e) {
     if (number == 'C') {
       calcInput.value = '';
     }
+    if (number == '<') {
+    //  const reducedInput1 = calcInput.value.substring(0, calcInput.value.length -1);
+     const reducedInput = calcInput.value.slice(0,-1);
+      calcInput.value = reducedInput;
+      console.log(reducedInput);
+    }
   } else {
     const previousNumber = calcInput.value;
     calcInput.value = previousNumber + number;
